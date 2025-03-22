@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\KRISH\Downloads\CubeGUI-JSON-Plugin\json_plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\KRISH\Downloads\CubeGUI-JSON-Plugin\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{28B0C21B-3D21-30F4-AD53-D02B445558A5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
