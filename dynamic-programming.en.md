@@ -92,13 +92,18 @@ The *constraint* in the knapsack problem is
 
 ### q:{}
 
-Which function describes the recurrence for computing the max profit in the knapsack problem for the $k$-th item and total weight $g$?
+Which function describes the recurrence step in computing the maximum profit in the knapsack problem for the $k$-th item and the current total weight $g$?
 
-- [X]  $egin{cases} p(k-1,g)&	ext{if } g_k>g\\
-       \max\{p(k-1,g),\\phantom{\max\{}p(k-1,g-g_k)+w_k\}&	ext{otherwise}
+- [X]  $\begin{cases} p(k-1,g)&\text{if } g_k > g \\\\
+       \max\bigl\{\,p(k-1,g),\\\hphantom{\max\bigl\{\,}p(k-1,g-g_k)+w_k\bigr\}&\text{otherwise}
        \end{cases}$
-- [ ] Same with `p(k,g)` and `g_k<g`
-- [ ] Same with `p(k+1,g)` and `g_k=g`
+- [ ] $\begin{cases} p(k,g)&\text{if } g_k < g \\\\
+      \max\bigl\{\,p(k-1,g),\\\hphantom{\max\bigl\{\,}p(k-1,g-g_k)+w_k\bigr\}&\text{otherwise}
+      \end{cases}$
+- [ ] $\begin{cases} p(k+1,g)&\text{if } g_k = g \\\\
+      \max\bigl\{\,p(k-1,g),\\\hphantom{\max\bigl\{\,}p(k-1,g-g_k)+w_k\bigr\}&\text{otherwise}
+      \end{cases}$
+
 
 ### q:{}
 
