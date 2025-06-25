@@ -282,3 +282,79 @@ Are shortest paths computed by Dijkstra or A* always unique?
 - [ ] Yes
 - [X] No :: Multiple shortest paths may exist (e.g., on grids)
 
+## More on Shortest Paths
+
+You can find implementations of all algorithms for finding shortest paths in the code examples for the lecture. With them, you can also visually illustrate the differences between the various algorithms. The best setup is probably a search on a regular grid, as shown in the lecture. (To make this *colorful*, you’ll need a [terminal emulator] as is common under Unix-based systems!)
+
+A similar, more visually refined and interactive representation can be found **[here]**, including explanations and code snippets in [Python]. This visualization focuses on the application of the A* algorithm for pathfinding in *games*.
+
+[terminal emulator]: https://en.wikipedia.org/wiki/Terminal_emulator
+[here]: http://www.redblobgames.com/pathfinding/a-star/introduction.html
+[Python]: https://www.python.org/
+
+---
+
+## Flow in Graphs
+
+### q:{}
+
+What do edge weights represent in flow computation on a graph?
+
+- [ ] Edge length
+- [X] Capacities :: That is, the maximum flow through that edge. Imagine the edges as pipes through which a certain amount of fluid can be pumped per unit time.
+- [ ] Resistance
+- [ ] Inductance
+
+### q:{}
+
+We consider graphs with
+
+- [ ] one source and multiple sinks
+- [ ] one sink and multiple sources
+- [X] exactly one source and one sink :: Any graph can be transformed into this form by consolidating all sources (or sinks) into one — by introducing a new node as source (or sink).
+
+### q:{}
+
+What conditions must a flow in a graph satisfy?
+
+- [X] At every node (except source and sink), the sum of inflows and outflows must be zero.
+- [ ] At every node (except source and sink), the sum of outflows must be zero.
+- [ ] At every node (except source and sink), the sum of inflows must be zero.
+- [X] The flow on each edge may not exceed its weight (capacity).
+- [ ] The flow on each edge must be at least as large as the weight.
+- [X] The flow along each edge is positive.
+- [X] The backflow against the edge direction equals the negative of the flow on the edge. :: We use this *anti-symmetry* rule, ensuring that the total flow (including backflows) in any node is zero.
+- [X] The value of a flow is the total (out-)flow from the source.
+- [X] The value of a flow is the total (in-)flow into the sink.
+
+### q:{}
+
+A *cut* is a partitioning of the graph into two disjoint parts.
+
+- [X] Yes
+- [ ] No
+
+### q:{}
+
+A cut can be represented as
+
+- [X] A subset of nodes and its complement
+- [X] A subset of edges that are removed
+- [ ] A path in the graph
+
+### q:{}
+
+The value of a cut is
+
+- [X] The sum of the edge weights of the edges that are removed :: i.e., those "cut through"
+- [ ] The sum of node values in one node set :: What would a "node value" even be?
+- [ ] The quotient of the sums of node values in the two sets
+
+### q:{}
+
+In a weighted graph, the value of the maximum flow equals the value of the minimum cut.
+
+- [X] Yes
+- [ ] No
+
+
